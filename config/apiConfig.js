@@ -6,5 +6,6 @@ module.exports = {
         version:'2017-10-13',
         apikey: '_LQ_jy1x50lKwVJl8iOnbajCaaVFVV7_ShMi2GU5ISOW',
         url: 'https://api.eu-gb.personality-insights.watson.cloud.ibm.com/instances/0f5114c4-ea4e-4f1e-ab69-46fc0b1015b1'   
-    }
+    },
+    "validation_message":"Description field is missing or it's empty"
 }
