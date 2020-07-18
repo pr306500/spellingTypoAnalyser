@@ -11,6 +11,8 @@ const express = require('express'),
       addRequestId = require('express-request-id')(),
       fs = require('fs');
       global.spellCheckr = require('simple-spellchecker');
+      global.appConfig = require('./config/apiConfig');
+      global.initializeIBMWatson = require('./api/index');
     
 try{
 
@@ -140,12 +142,11 @@ let httpServer = httpProtocol.createServer(app);
 /**
 * Server start port.
 **/
-httpServer.listen('3000', () => {
-   // global.logger.info(`${global.envConfig.environmentName.charAt(0).toUpperCase() + global.envConfig.environmentName.slice(1)} server started at port ${global.config.app_port}`);
+httpServer.listen(global.appConfig.app_port, () => {
+   global.logger.info(`Server started at port ${global.appConfig.app_port}`);
 });
 
-}catch(e){
-  console.log(e);
+}
+catch(e){
   global.logger.error(`Error occured at ${__dirname} - ${e}`);
-
 }

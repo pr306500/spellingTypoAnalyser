@@ -15,6 +15,7 @@
     "express-device": "^0.4.2",
     "express-request-id": "^1.4.1",
     "helmet": "^3.23.3",
+    "ibm-watson": "^5.6.0",
     "moment": "^2.27.0",
     "morgan": "^1.10.0",
     "os": "^0.1.1",
